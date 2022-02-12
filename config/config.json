@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "meetings-adaptive-card-extension": {
+      "components": [
+        {
+          "entrypoint": "./lib/adaptiveCardExtensions/meetings/MeetingsAdaptiveCardExtension.js",
+          "manifest": "./src/adaptiveCardExtensions/meetings/MeetingsAdaptiveCardExtension.manifest.json"
+        }
+      ]
+    },
+    "people-adaptive-card-extension": {
+      "components": [
+        {
+          "entrypoint": "./lib/adaptiveCardExtensions/people/PeopleAdaptiveCardExtension.js",
+          "manifest": "./src/adaptiveCardExtensions/people/PeopleAdaptiveCardExtension.manifest.json"
+        }
+      ]
+    },
+    "trip-adaptive-card-extension": {
+      "components": [
+        {
+          "entrypoint": "./lib/adaptiveCardExtensions/trip/TripAdaptiveCardExtension.js",
+          "manifest": "./src/adaptiveCardExtensions/trip/TripAdaptiveCardExtension.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "MeetingsAdaptiveCardExtensionStrings": "lib/adaptiveCardExtensions/meetings/loc/{locale}.js",
+    "PeopleAdaptiveCardExtensionStrings": "lib/adaptiveCardExtensions/people/loc/{locale}.js",
+    "TripAdaptiveCardExtensionStrings": "lib/adaptiveCardExtensions/trip/loc/{locale}.js"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.3",
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "TextBlock",
+      "size": "Medium",
+      "weight": "Bolder"       
+    },
+
+    {
+      "type": "ColumnSet",
+      "$data":"${peoples}",
+      "separator": true,
+      "columns": [
+          {
+              "type": "Column",
+              "items": [
+                {
+                  "type": "FactSet",                
+                  "facts": [
+                    {                       
+                      "title": "Title",
+                      "value": "${title}"
+                    },
+                    {                       
+                      "title": "First Name",
+                      "value": "${firstname}"
+                    },
+                    {                       
+                      "title": "Sur Name",
+                      "value": "${surname}"
+                    },          
+                    {                       
+                      "title": "Email",
+                      "value": "${mail}"
+                    }
+                  ],
+            
+                  "separator": true 
+            
+                }  
+              ],
+              "width": "auto"
+          },
+          {
+              "type": "Column",
+              "items": [
+                {
+                  "type": "Image",
+                  "style": "Person",
+                  "url": "${profileImage}",
+                  "size": "Small"
+               }
+              ],
+              "width": "stretch"
+          }
+      ]
+  }       
+  ] 
+}
